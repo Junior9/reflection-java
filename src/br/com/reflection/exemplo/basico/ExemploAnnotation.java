@@ -1,13 +1,12 @@
-package br.com.reflection.exemplo;
+package br.com.reflection.exemplo.basico;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import br.com.reflection.anotacao.ColunaJtable;
-import br.com.reflection.model.User;
+import br.com.reflection.exemplo.anotacao.ColunaJtable;
+import br.com.reflection.exemplo.model.User;
 
 public class ExemploAnnotation {
-
   
   /**
    * @param obj
@@ -17,7 +16,7 @@ public class ExemploAnnotation {
    * @throws IllegalArgumentException 
    * @throws IllegalAccessException 
    */
-  public static void getMethodByAnnotation(Object obj,Class annotationClass,String nomeMethod) throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException{
+  public static void getMethodByAnnotation(Object obj,Class<? extends Annotation> annotationClass,String nomeMethod) throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException{
     Class<?> classe = obj.getClass();
     Method[] methods = classe.getMethods();
     

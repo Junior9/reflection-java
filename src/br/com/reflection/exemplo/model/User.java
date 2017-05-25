@@ -1,6 +1,7 @@
-package br.com.reflection.model;
+package br.com.reflection.exemplo.model;
 
-import br.com.reflection.anotacao.ColunaJtable;
+import br.com.reflection.exemplo.anotacao.ColunaJtable;
+import br.com.reflection.exemplo.anotacao.NomePropriedade;
 
 public class User {
   
@@ -17,14 +18,19 @@ public class User {
     this.senha = senha;
   }
 
+  @NomePropriedade(valor="Nome do usuario:")
   @ColunaJtable(colNum=1)
   public String getNome() {
     return nome;
   }
+  
+  @NomePropriedade(valor="Email do usuario:")
   @ColunaJtable(colNum=2)
   public String getEmail() {
     return email;
   }
+  
+  @NomePropriedade(valor="Senha: ")
   @ColunaJtable(colNum=3)
   public String getSenha() {
     return senha;

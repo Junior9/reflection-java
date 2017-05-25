@@ -1,0 +1,7 @@
+br\com\reflection\exemplo\basico\anotacao\ColunaJtable.class
+br\com\reflection\exemplo\basico\ExemploMethodAndField.class
+br\com\reflection\exemplo\model\User.class
+br\com\reflection\exemplo\elaborado\semReflection\CreateAllModel.class
+br\com\reflection\exemplo\model\Produto.class
+br\com\reflection\exemplo\elaborado\comReflection\GeradorDeMapa.class
+br\com\reflection\exemplo\basico\ExemploAnnotation.class

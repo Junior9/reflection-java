@@ -1,4 +1,4 @@
-package br.com.reflection.anotacao;
+package br.com.reflection.exemplo.anotacao;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -7,7 +7,6 @@ import java.lang.annotation.Target;
 
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface ColunaJtable {
-  int colNum();
+public @interface NomePropriedade {
+  String valor();
 }
- 
