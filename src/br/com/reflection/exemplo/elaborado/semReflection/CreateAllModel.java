@@ -1,6 +1,6 @@
 package br.com.reflection.exemplo.elaborado.semReflection;
 
-import br.com.reflection.exemplo.model.Produto;
+import br.com.reflection.model.Produto;
 
 public class CreateAllModel {
 

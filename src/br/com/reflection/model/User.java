@@ -1,4 +1,4 @@
-package br.com.reflection.exemplo.model;
+package br.com.reflection.model;
 
 import br.com.reflection.exemplo.anotacao.ColunaJtable;
 import br.com.reflection.exemplo.anotacao.NomePropriedade;

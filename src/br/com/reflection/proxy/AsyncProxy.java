@@ -4,7 +4,6 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
-import java.util.Arrays;
 
 public class AsyncProxy implements InvocationHandler {
   
@@ -15,10 +14,9 @@ public class AsyncProxy implements InvocationHandler {
   }
   
   @Override
-  public ModelTesteProxy invoke(Object proxy, final Method method, final Object[] parameters) throws Throwable {
-    ModelTesteProxy result = null; 
-
-    System.out.println("Invoking " + method.getName() + " with args " + Arrays.toString(parameters) + "... ");
+  public Object invoke(Object proxy, final Method method, final Object[] parameters) throws Throwable {
+    Object result = null; 
+    //System.out.println("Invoking " + method.getName() + " with args " + Arrays.toString(parameters) + "... ");
     
     if(method.getReturnType() == void.class){
       new Thread(){
@@ -34,6 +32,7 @@ public class AsyncProxy implements InvocationHandler {
           }
          }
       }.start();
+      
       return null;
     }else{
       result= (ModelTesteProxy) method.invoke(obj, parameters);
@@ -41,8 +40,13 @@ public class AsyncProxy implements InvocationHandler {
     return result;
   }
   
-  public static ModelTesteProxy criarProxy(ModelTesteProxy obj){
-    return (ModelTesteProxy) Proxy.newProxyInstance(obj.getClass().getClassLoader(),obj.getClass().getInterfaces(), new AsyncProxy(obj));
+  public static Object criarProxy(Object obj){
+    
+      Object result = Proxy.newProxyInstance(obj.getClass().getClassLoader(),
+                        obj.getClass().getInterfaces(),
+                        new AsyncProxy(obj));
+      
+      return result;
   }
 
 }

@@ -5,8 +5,8 @@ import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 import br.com.reflection.exemplo.anotacao.NomePropriedade;
-import br.com.reflection.exemplo.model.Produto;
-import br.com.reflection.exemplo.model.User;
+import br.com.reflection.model.Produto;
+import br.com.reflection.model.User;
 
 /**
  * 

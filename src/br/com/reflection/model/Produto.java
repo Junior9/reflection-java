@@ -1,4 +1,4 @@
-package br.com.reflection.exemplo.model;
+package br.com.reflection.model;
 
 public class Produto {
   
@@ -32,5 +32,9 @@ public class Produto {
   }
   public void setPreco(Double preco) {
     this.preco = preco;
+  }
+  
+  public Double getDesconto(){
+    return 100.0;
   }
 }

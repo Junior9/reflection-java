@@ -4,7 +4,7 @@ import java.lang.annotation.Annotation;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import br.com.reflection.exemplo.anotacao.ColunaJtable;
-import br.com.reflection.exemplo.model.User;
+import br.com.reflection.model.User;
 
 public class ExemploAnnotation {
   

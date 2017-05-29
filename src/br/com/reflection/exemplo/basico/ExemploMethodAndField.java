@@ -5,8 +5,8 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.List;
 import br.com.reflection.exemplo.anotacao.NomePropriedade;
-import br.com.reflection.exemplo.model.User;
 import br.com.reflection.exemplo.util.FunctionAnnotation;
+import br.com.reflection.model.User;
 
 public class ExemploMethodAndField {
   
